@@ -5,14 +5,15 @@ const theme = {
     yellow50: '#ffd60080',
     red: '#DA1A00',
     gray: '#9B9B9B',
+    lightGray: '#E5E5E5',
     green: '#26DA58',
     white: '#FFFFFF',
     blue: '#80D7ED',
-    transparent: 'transparent'
+    transparent: 'transparent',
   },
   fontWeight: {
     regular: 400,
-    bold: 900
+    bold: 900,
   },
   fontSizes: {
     fz9: 9,
@@ -27,8 +28,8 @@ const theme = {
     fz56: 56,
     fz60: 60,
     fz100: 100,
-    fz200: 200
-  }
+    fz200: 200,
+  },
 };
 
 export default theme;
