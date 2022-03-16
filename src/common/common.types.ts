@@ -14,6 +14,13 @@ export enum TypographyFontSizes {
   fz200 = 'fz200',
 }
 
+export enum TextInputTypes {
+  tel = 'tel',
+  text = 'text',
+  email = 'email',
+  password = 'password',
+}
+
 export enum TypographyFontWeight {
   regular = 'regular',
   bold = 'bold',

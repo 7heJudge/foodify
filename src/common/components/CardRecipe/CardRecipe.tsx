@@ -41,6 +41,8 @@ const CardContainer = styled.div`
 
 const Image = styled.img`
   max-width: 390px;
+  min-width: 390px;
+  min-height: 390px;
 `;
 
 const SliceTypography = styled(Typography)<{ line: number }>`

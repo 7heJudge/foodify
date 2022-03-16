@@ -10,6 +10,7 @@ import { fetchRandomRecipe } from 'store/randomDishes/ducks/thunks/randomDishes'
 import Button from 'common/Button/Button';
 import theme from 'theme/theme';
 import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
+import WithRouteAnimation from '../../../common/hoc/WithRouteAnimation';
 
 const RandomDish = () => {
   const dispatch = useDispatch();
@@ -86,4 +87,4 @@ const ActionButton = styled(Button)`
   margin: 0 5px;
 `;
 
-export default RandomDish;
+export default WithRouteAnimation(RandomDish);

@@ -1,6 +1,6 @@
 export type Meal = {
   idMeal: string;
-  strMealThumb: string;
+  strMealThumb?: string;
   strMeal: string;
   strInstructions: string;
 };

@@ -9,7 +9,7 @@ import Favourites from './modules/Favourites/pages/Favourites';
 
 const Routes = () => {
   return (
-    <RouterContainer>
+    <>
       <AnimatePresence>
         <Switch location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
@@ -20,15 +20,8 @@ const Routes = () => {
           </Route>
         </Switch>
       </AnimatePresence>
-    </RouterContainer>
+    </>
   );
 };
-
-const RouterContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-`;
 
 export default Routes;
