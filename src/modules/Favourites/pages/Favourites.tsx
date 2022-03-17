@@ -7,7 +7,6 @@ import { useAppSelector } from 'store/store';
 import { useEffect } from 'react';
 import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
 import Typography from '../../../common/components/Typography/Typography';
-import WithRouteAnimation from '../../../common/hoc/WithRouteAnimation';
 
 const Favourites = () => {
   const dispatch = useDispatch();
@@ -53,4 +52,4 @@ const CardWrapper = styled.div`
   margin-bottom: 50px;
 `;
 
-export default WithRouteAnimation(Favourites);
+export default Favourites;

@@ -1,3 +1,9 @@
+export interface IconProps {
+  width?: number;
+  height?: number;
+  color?: string;
+}
+
 export enum TypographyFontSizes {
   fz9 = 'fz9',
   fz12 = 'fz12',
