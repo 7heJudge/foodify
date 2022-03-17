@@ -17,6 +17,7 @@ import Spacer from '../Spacer/Spacer';
 type ModalProps = {
   active: boolean;
   handler: (state: boolean) => void;
+  handleConfetti?: (state: boolean) => void;
 };
 
 const VALIDATION_SCHEMA = Yup.object().shape({
@@ -24,7 +25,7 @@ const VALIDATION_SCHEMA = Yup.object().shape({
   strInstructions: Yup.string().required('Dish description field is required'),
 });
 
-const AddCustomDish = ({ active, handler }: ModalProps) => {
+const AddCustomDish = ({ active, handler, handleConfetti }: ModalProps) => {
   const dispatch = useDispatch();
 
   const initialValues = { idMeal: '', strMeal: '', strInstructions: '' };
@@ -42,6 +43,9 @@ const AddCustomDish = ({ active, handler }: ModalProps) => {
     localStorage.setItem('favourites', JSON.stringify(favourites));
     dispatch(favouritesActions.addToFavourites([values]));
     handler(false);
+    if (handleConfetti) {
+      handleConfetti(true);
+    }
   }
 
   return (

@@ -1,6 +1,7 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
+import Confetti from 'react-confetti';
 
 import theme from 'theme/theme';
 
@@ -15,14 +16,26 @@ const Header = () => {
 
   const [activeModal, setActiveModal] = useState<boolean>(false);
   const [hamburgerMenu, setHamburgerMenu] = useState<boolean>(false);
+  const [activeConfetti, setActiveConfetti] = useState<boolean>(false);
 
   const handleModal = useCallback((state: boolean) => setActiveModal(state), [activeModal]);
 
   const handleHamburger = () => setHamburgerMenu(!hamburgerMenu);
 
+  const handleConfetti = (state: boolean) => setActiveConfetti(state);
+
+  useEffect(() => {
+    const id = setTimeout(() => handleConfetti(false), 2500);
+
+    return () => {
+      clearTimeout(id);
+    };
+  }, [activeConfetti]);
+
   return (
     <>
       <HeaderContainer>
+        {activeConfetti && <Confetti gravity={0.17} numberOfPieces={1200} recycle={false} />}
         <NavBar active={hamburgerMenu}>
           <ByColumn>
             <NavButton to="/" active={hamburgerMenu}>
@@ -60,7 +73,7 @@ const Header = () => {
           <HamburgerIcon />
         </HamburgerMenu>
       </HeaderContainer>
-      <AddCustomDish active={activeModal} handler={handleModal} />
+      <AddCustomDish active={activeModal} handler={handleModal} handleConfetti={handleConfetti} />
     </>
   );
 };
