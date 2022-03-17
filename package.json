@@ -16,8 +16,8 @@
     "@types/styled-components": "^5.1.24",
     "@types/uuid": "^8.3.4",
     "axios": "^0.26.1",
+    "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
-    "framer-motion": "^6.2.8",
     "ramda": "^0.28.0",
     "react": "^17.0.2",
     "react-confetti": "^6.0.1",
@@ -33,7 +33,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -f .env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

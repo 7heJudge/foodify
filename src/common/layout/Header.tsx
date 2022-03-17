@@ -1,13 +1,14 @@
 import { useCallback, useState } from 'react';
 import styled, { css } from 'styled-components';
-
 import { Link, useLocation } from 'react-router-dom';
+
 import theme from 'theme/theme';
+
 import Typography from '../components/Typography/Typography';
-import Button from '../Button/Button';
+import Button from '../components/Button/Button';
 import AddCustomDish from '../components/AddCustomDish/AddCustomDish';
-import { sm } from 'utils/constants';
 import HamburgerIcon from '../icons/Hamburger.icon';
+import { sm } from 'utils/constants';
 
 const Header = () => {
   const { pathname } = useLocation();

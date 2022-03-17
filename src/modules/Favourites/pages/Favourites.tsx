@@ -1,12 +1,13 @@
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
+import { useAppSelector } from 'store/store';
+import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
+
 import CardRecipe from 'common/components/CardRecipe/CardRecipe';
 import Spacer from 'common/components/Spacer/Spacer';
-import { useAppSelector } from 'store/store';
-import { useEffect } from 'react';
-import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
-import Typography from '../../../common/components/Typography/Typography';
+import Typography from 'common/components/Typography/Typography';
 
 const Favourites = () => {
   const dispatch = useDispatch();
@@ -18,10 +19,9 @@ const Favourites = () => {
     dispatch(favouritesActions.addToFavourites(localFavourites));
   }, []);
 
-  return (
-    <>
-      <Spacer height={147} />
-      <CardsContainer>
+  const renderContentCard = () => {
+    return (
+      <>
         {favourites.length ? (
           favourites.map((favourite, index) => (
             <CardWrapper key={`Favourite meal: ${index} + ${favourite.idMeal}`}>
@@ -35,7 +35,14 @@ const Favourites = () => {
         ) : (
           <Typography text="No favorite Dish!" fontSize="fz48" fontColor="gray" />
         )}
-      </CardsContainer>
+      </>
+    );
+  };
+
+  return (
+    <>
+      <Spacer height={147} />
+      <CardsContainer>{renderContentCard()}</CardsContainer>
       <Spacer height={100} />
     </>
   );

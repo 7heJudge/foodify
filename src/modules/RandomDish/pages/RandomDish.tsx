@@ -2,14 +2,15 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
+import theme from 'theme/theme';
+import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
+import { useAppSelector } from 'store/store';
+import { fetchRandomRecipe } from 'store/randomDishes/ducks/thunks/randomDishes';
+
 import CardRecipe from 'common/components/CardRecipe/CardRecipe';
 import Spacer from 'common/components/Spacer/Spacer';
 import { Meal } from 'common/types/common.types';
-import { useAppSelector } from 'store/store';
-import { fetchRandomRecipe } from 'store/randomDishes/ducks/thunks/randomDishes';
-import Button from 'common/Button/Button';
-import theme from 'theme/theme';
-import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
+import Button from 'common/components/Button/Button';
 
 const RandomDish = () => {
   const dispatch = useDispatch();

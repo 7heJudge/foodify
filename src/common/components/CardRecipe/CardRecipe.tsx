@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from 'logo.svg';
-
 import theme from 'theme/theme';
+
+import logo from 'logo.svg';
 import Typography from '../Typography/Typography';
 import Spacer from '../Spacer/Spacer';
 
@@ -35,8 +35,10 @@ const CardRecipe = ({ title, photo, description }: CardRecipeProps) => {
 const CardContainer = styled.div`
   background-color: ${theme.colors.lightGray};
   max-width: 390px;
-  min-height: 495px;
+  min-height: 641px;
   margin: 0 15px;
+  overflow: hidden;
+  border-radius: 20px;
 `;
 
 const Image = styled.img`

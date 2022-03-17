@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+Foodify Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+You need to create an application which will allow the user to get a random recipe
+and give him / her an ability to save it in the favorite dishes list.
+1. Call the API endpoint
+   “https://www.themealdb.com/api/json/v1/1/random.php” to fetch a
+   random recipe and display it on the main page.
+2. Add an ability to save or skip current recipes.
+3. Saved recipes should be displayed on the other page (for example favorite
+   recipes) and will persist their state after reloading the page.
+4. Implement a modal window with form on the favorite recipes page to allow the
+   user create his / her own recipes. Each recipe has to include a title and a
+   cooking instruction.
+   Task requirements
+   ● You should use React for this app.
+   ● API should be called once on page load, skip button should refetch random
+   data from API
+   ● You can use any state manager you want or not use it at all
+   ● When you add custom dish, or when API has no image, you should show
+   placeholder
+   ● Design is up to you
+   ● You can use any styling solution you want (sass, styled-components,
+   CSS-in-JS, Tailwind)
+   ● You can use UI libraries
+   ● Your app should be responsive and be able to adopt to mobile devices
+   ● Storing data in local-storage will be a plus
+   ● App should be stored on public github repo
+   ● You should use gh-pages to host your project
+   ● Make sure you provide both github and gh-pages links to our HR, when you
+   finish the project
+   Resources
+   You can find mock-ups here
+   https://www.figma.com/file/PPER1ajSFMx8qg0TRKegXB/Foodify?node-id=0%3A1 -
+   Connect to preview
+   Have fun!

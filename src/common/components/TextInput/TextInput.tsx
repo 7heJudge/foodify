@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { TextInputTypes } from 'common/common.types';
 import Typography from 'common/components/Typography/Typography';
 import theme from 'theme/theme';
-import Button from '../../Button/Button';
+import Button from '../Button/Button';
 
 type TextInputProps = {
   error?: string;

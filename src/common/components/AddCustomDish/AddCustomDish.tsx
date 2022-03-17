@@ -10,7 +10,7 @@ import { favouritesActions } from 'store/favourites/ducks/reducers/favourites';
 
 import Typography from '../Typography/Typography';
 import TextInput from '../TextInput/TextInput';
-import Button from '../../Button/Button';
+import Button from '../Button/Button';
 import Textarea from '../Textarea/Textarea';
 import Spacer from '../Spacer/Spacer';
 
